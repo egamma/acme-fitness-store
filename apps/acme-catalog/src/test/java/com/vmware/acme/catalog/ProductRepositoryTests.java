@@ -49,9 +49,9 @@ class ProductRepositoryTests {
         });
     }
 
-    @Test
     void validatSupplierPhoneNumber(String phoneNumber) {
         // TODO validate the phone number
+
     }
 
 }
