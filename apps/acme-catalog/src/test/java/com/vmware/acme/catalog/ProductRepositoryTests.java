@@ -49,7 +49,7 @@ class ProductRepositoryTests {
         });
     }
 
-    void validatSupplierPhoneNumber(String phoneNumber) {
+    void validateSupplierPhoneNumber(String phoneNumber) {
         // TODO validate the phone number
 
     }
