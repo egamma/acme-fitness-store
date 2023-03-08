@@ -14,6 +14,9 @@ import org.springframework.test.context.DynamicPropertySource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 @Testcontainers
 @DataJpaTest(excludeFilters = @ComponentScan.Filter(MetricsConfiguration.class))
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -51,7 +54,5 @@ class ProductRepositoryTests {
 
     void validateSupplierPhoneNumber(String phoneNumber) {
         // TODO validate the phone number
-
     }
-
 }
