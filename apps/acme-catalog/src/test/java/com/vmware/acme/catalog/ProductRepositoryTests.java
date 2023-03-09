@@ -54,5 +54,17 @@ class ProductRepositoryTests {
 
     void validateSupplierPhoneNumber(String phoneNumber) {
         // TODO validate the phone number
+        // regex pattern for phone number
+        String regex = "^(\\+\\d{1,3}[- ]?)?\\d{10}$";
+        // compile regex pattern
+        Pattern pattern = Pattern.compile(regex);
+        // match the given phone number with regex pattern
+        Matcher matcher = pattern.matcher(phoneNumber);
+        // if the phone number is not valid
+        if (!matcher.matches()) {
+            // throw an exception
+            throw new IllegalArgumentException("Invalid phone number");
+        }
+        
     }
 }

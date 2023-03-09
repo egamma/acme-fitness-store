@@ -39,7 +39,11 @@ class CardTest {
 		String expirationYear = String.valueOf(LocalDate.now().getYear() + 5);
 		assertThat(new Card("1234", expirationYear, "12", "123").isExpired()).isFalse();
 	}
-
+@Test
+	void isExpired_shouldReturnTrueForExpiredCard() {
+		String expirationYear = String.valueOf(LocalDate.now().getYear() - 1);
+		assertThat(new Card("1234", expirationYear, "12", "123").isExpired()).isTrue();
+	}
 	@Test
 	void isValidCardNumber_ShouldReturnTrueForCardNumberDivisibleByFour() {
 		assertThat(new Card("1234", "2070", "12", "123").isValidCardNumber()).isTrue();
